@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+html {
+  overflow: scroll;
+  scroll-snap-type: y mandatory; /* Force le défilement sur l'axe y */
+  height: 100vh;
+  //scroll-snap-align: center;
+
+}
+
+
+
+
+.header {
+  height: 100vh;
+  background: rgb(247,140,62);
+  background: radial-gradient(circle, rgba(247,140,62,1) 0%, rgba(51,49,49,1) 89%);
+  .grid {
+    display: grid;
+    height: 80%;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr;
+
+
+    .photo-1 {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      //scroll-snap-align: center;
+      background: url("../img/Buste/Tee_shirts/tee-shirt-femme.jpg") center;
+      background-size: cover;
+      grid-column: 1;
+      transition: all .5s ease;
+      &:hover {
+      transform: scale(1.01);
+        box-shadow: 30px 20px 30px black;
+      }
+
+
+      h1 {
+        font-family: 'Raleway', sans-serif;
+        margin-bottom: 20px;
+        font-size: 40px;
+        transform: translateX(3rem);
+        color: #0000007a;
+      }
+
+
+    }
+
+    .photo-2 {
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+        justify-content: center;
+      scroll-snap-align: center;
+      background: url("../img/Sweat/sweat_jaune.jpg") no-repeat center;
+      background-size: cover;
+      transition: all .4s ease-out;
+      &:hover {
+        box-shadow: -30px 20px 30px black;
+        transform: scale(1.01);
+
+      }
+
+
+
+
+      h1 {
+        transform: translate(-1rem, 7rem);
+        font-family: 'Raleway', sans-serif;
+        font-size: 40px;
+        color: white;
+      }
+
+    }
+
+  }
+
+
+
+  .arrow-down-svg {
+    border: solid black 2px;
+    animation: arrow-animation 1s infinite alternate-reverse;
+    margin: 3vh 10vw;
+    border-radius: 50px;
+    box-shadow: 0 0 10px black;
+    height: 55px;
+    width: 55px;
+  }
+}
+
+
+@keyframes arrow-animation {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(10px);
+  }
+
+  50% {
+    transform: translateY(0)
+  }
+  100% {
+    transform: translateY(10px)
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

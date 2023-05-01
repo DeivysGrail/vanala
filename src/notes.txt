@@ -1,0 +1,54 @@
+Site avec principalement des couleurs pastel, une ambiance douce et moderne
+
+Catégories dans le menu 'hidden' :
+
+- Hommes ✓
+- Femmes ✓
+- Enfant ✓
+
+- Type de vêtements :
+  Polos ✓, tee-shirts ✓, chemises ✓, Sweat ✓, veste ✓
+
+- Sacs:
+ Sac de sport ✓, cartable ✓, sac à main ✓, sacoche ✓
+
+- Outfits déjà fait en fonction du style de la personne ✓
+
+- Chaussures :
+Sneakers ✓, bottes ✓, Sandales ✓, crocks ✓, talon ✓
+
+
+- Accessoires :
+ Lunettes ✓, casquettes ✓, Chapeaux ✓, Montres ✓, Bijoux ✓
+
+
+ __________________________________________________________
+
+
+La navbar est simple avec des icones pour les différentes fonctionnalités et le nom de la marque :
+"PAS SUR menu-burger avec icone PAS SUR -- un input avec icone loupe ✓-- le nom de la marque ✓ --
+ panier avec icone d'un sac de course ✓ -- profile avec un silhouette comme icone ✓ --
+  les favoris avec un coeur en icone ✓
+
+
+
+
+
+-----------------------------------------------------------------------------
+Ensuite sous la navbar il y a trois choix : Hommes - enfants - femme qui lorsqu'ils sont hover déplie tous les vêtements disponibles sur le site pour cette catégorie.
+-------------------------
+
+
+Background navbar : #716E6D ✓
+Code de l'input : ✓
+
+position: absolute;
+width: 734px;
+height: 59px;
+left: 168px;
+top: 24px;
+
+background: #91F481; ✓
+border-radius: 89px 0px 26px 7px; ✓
+
+    TROIS CAROUSELS LIÉS AVEC DES PROPS OU SIMPLEMENT UN DICTIONNAIRE !!!!!!!

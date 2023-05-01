@@ -1,0 +1,450 @@
+@import url(../../node_modules/react-responsive-carousel/lib/styles/carousel.css);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  font-family: 'Poppins', sans-serif; }
+
+.choix-du-genre {
+  color: white;
+  z-index: 5 !important; }
+  .choix-du-genre .liste-des-genres {
+    background: black;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    transition: background .3s ease; }
+    .choix-du-genre .liste-des-genres li {
+      margin: 0 1rem; }
+    .choix-du-genre .liste-des-genres .homme:hover .to-display-homme {
+      visibility: visible;
+      opacity: 1; }
+    .choix-du-genre .liste-des-genres .homme .to-display-homme {
+      color: black;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity .6s ease; }
+      .choix-du-genre .liste-des-genres .homme .to-display-homme .choix-homme .ul-root {
+        z-index: 3;
+        width: 100%;
+        left: 0;
+        background: rgba(196, 72, 12, 0.58);
+        transition: all .2s linear;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none; }
+        .choix-du-genre .liste-des-genres .homme .to-display-homme .choix-homme .ul-root .categorie .titre h1 {
+          position: relative;
+          margin: 0 3vw;
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.01);
+          border-radius: 30%; }
+          .choix-du-genre .liste-des-genres .homme .to-display-homme .choix-homme .ul-root .categorie .titre h1:after, .choix-du-genre .liste-des-genres .homme .to-display-homme .choix-homme .ul-root .categorie .titre h1:before {
+            content: "";
+            position: absolute;
+            transition: all .2s linear;
+            left: 50%;
+            bottom: 0;
+            height: 3px;
+            width: 5px;
+            background-color: black;
+            opacity: 0;
+            transform: translateX(-50%); }
+          .choix-du-genre .liste-des-genres .homme .to-display-homme .choix-homme .ul-root .categorie .titre h1:hover:after, .choix-du-genre .liste-des-genres .homme .to-display-homme .choix-homme .ul-root .categorie .titre h1:hover:before {
+            background: black;
+            opacity: 1;
+            transform: scaleX(30); }
+        .choix-du-genre .liste-des-genres .homme .to-display-homme .choix-homme .ul-root .categorie .choix-disponible {
+          list-style-type: none;
+          visibility: hidden;
+          border-radius: 20px;
+          opacity: 0.2;
+          transition: opacity 700ms linear; }
+          .choix-du-genre .liste-des-genres .homme .to-display-homme .choix-homme .ul-root .categorie .choix-disponible li {
+            opacity: .5;
+            transition: all .2s linear; }
+            .choix-du-genre .liste-des-genres .homme .to-display-homme .choix-homme .ul-root .categorie .choix-disponible li:hover {
+              opacity: 1; }
+        .choix-du-genre .liste-des-genres .homme .to-display-homme .choix-homme .ul-root .categorie:hover .choix-disponible {
+          transition: opacity 700ms linear;
+          visibility: visible;
+          opacity: 1; }
+    .choix-du-genre .liste-des-genres .femme:hover .to-display-femme {
+      visibility: visible;
+      opacity: 1; }
+    .choix-du-genre .liste-des-genres .femme .to-display-femme {
+      color: black;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity .7s ease; }
+      .choix-du-genre .liste-des-genres .femme .to-display-femme .choix-femme {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .choix-du-genre .liste-des-genres .femme .to-display-femme .choix-femme .ul-root {
+          left: 0;
+          z-index: 3;
+          width: 100%;
+          background: rgba(160, 206, 231, 0.46);
+          transition: all .2s linear;
+          margin-left: 0;
+          position: absolute;
+          display: flex;
+          justify-content: space-between;
+          list-style-type: none; }
+          .choix-du-genre .liste-des-genres .femme .to-display-femme .choix-femme .ul-root .categorie .titre h1 {
+            position: relative;
+            margin: 0 3vw;
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.01);
+            border-radius: 30%; }
+            .choix-du-genre .liste-des-genres .femme .to-display-femme .choix-femme .ul-root .categorie .titre h1:after, .choix-du-genre .liste-des-genres .femme .to-display-femme .choix-femme .ul-root .categorie .titre h1:before {
+              content: "";
+              position: absolute;
+              transition: all .2s linear;
+              left: 50%;
+              bottom: 0;
+              height: 3px;
+              width: 5px;
+              background-color: black;
+              opacity: 0;
+              transform: translateX(-50%); }
+            .choix-du-genre .liste-des-genres .femme .to-display-femme .choix-femme .ul-root .categorie .titre h1:hover:after, .choix-du-genre .liste-des-genres .femme .to-display-femme .choix-femme .ul-root .categorie .titre h1:hover:before {
+              background: black;
+              opacity: 1;
+              transform: scaleX(30); }
+          .choix-du-genre .liste-des-genres .femme .to-display-femme .choix-femme .ul-root .categorie .choix-disponible {
+            list-style-type: none;
+            visibility: hidden;
+            border-radius: 20px;
+            opacity: 0;
+            transition: opacity 700ms linear; }
+          .choix-du-genre .liste-des-genres .femme .to-display-femme .choix-femme .ul-root .categorie:hover .choix-disponible {
+            transition: opacity 700ms linear;
+            visibility: visible;
+            opacity: 1; }
+          .choix-du-genre .liste-des-genres .femme .to-display-femme .choix-femme .ul-root .categorie:hover li {
+            opacity: .5;
+            transition: all .2s linear; }
+            .choix-du-genre .liste-des-genres .femme .to-display-femme .choix-femme .ul-root .categorie:hover li:hover {
+              opacity: 1; }
+    .choix-du-genre .liste-des-genres .enfant:hover .to-display-enfant {
+      visibility: visible;
+      opacity: 1; }
+    .choix-du-genre .liste-des-genres .enfant .to-display-enfant {
+      color: black;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity .7s ease; }
+      .choix-du-genre .liste-des-genres .enfant .to-display-enfant .choix-enfant .ul-root {
+        z-index: 3;
+        width: 100%;
+        left: 0;
+        background: rgba(42, 238, 14, 0.46);
+        transition: all .2s linear;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none; }
+        .choix-du-genre .liste-des-genres .enfant .to-display-enfant .choix-enfant .ul-root .categorie .titre h1 {
+          position: relative;
+          margin: 0 3vw;
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.01);
+          border-radius: 30%; }
+          .choix-du-genre .liste-des-genres .enfant .to-display-enfant .choix-enfant .ul-root .categorie .titre h1:after, .choix-du-genre .liste-des-genres .enfant .to-display-enfant .choix-enfant .ul-root .categorie .titre h1:before {
+            content: "";
+            position: absolute;
+            transition: all .2s linear;
+            left: 50%;
+            bottom: 0;
+            height: 3px;
+            width: 5px;
+            background-color: black;
+            opacity: 0;
+            transform: translateX(-50%); }
+          .choix-du-genre .liste-des-genres .enfant .to-display-enfant .choix-enfant .ul-root .categorie .titre h1:hover:after, .choix-du-genre .liste-des-genres .enfant .to-display-enfant .choix-enfant .ul-root .categorie .titre h1:hover:before {
+            background: black;
+            opacity: 1;
+            transform: scaleX(30); }
+        .choix-du-genre .liste-des-genres .enfant .to-display-enfant .choix-enfant .ul-root .categorie .choix-disponible {
+          list-style-type: none;
+          visibility: hidden;
+          border-radius: 20px;
+          opacity: 0;
+          transition: opacity 700ms linear; }
+        .choix-du-genre .liste-des-genres .enfant .to-display-enfant .choix-enfant .ul-root .categorie:hover .choix-disponible {
+          transition: opacity 700ms linear;
+          visibility: visible;
+          opacity: 1; }
+        .choix-du-genre .liste-des-genres .enfant .to-display-enfant .choix-enfant .ul-root .categorie:hover li {
+          cursor: pointer;
+          opacity: .5;
+          transition: all .2s linear; }
+          .choix-du-genre .liste-des-genres .enfant .to-display-enfant .choix-enfant .ul-root .categorie:hover li:hover {
+            opacity: 1; }
+
+.div-carousel-enfant {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url("../img/bg-carousel/bg-kid-carousel (1).gif") no-repeat center/cover; }
+  .div-carousel-enfant .close-carousel {
+    animation: opacity-close-button 2s infinite alternate-reverse linear;
+    transition: all .4s linear;
+    transform: translateY(50px); }
+    .div-carousel-enfant .close-carousel:hover {
+      animation: none;
+      opacity: 0.7; }
+  .div-carousel-enfant .carousel-root {
+    margin-top: 10vh;
+    position: relative; }
+  .div-carousel-enfant .carousel button.control-arrow {
+    opacity: 1;
+    border-radius: 50%;
+    color: red;
+    height: 40px;
+    width: 40px;
+    top: 50%;
+    margin: 0 25vw;
+    position: absolute;
+    border: solid black 2px;
+    box-shadow: 0 0 10px black;
+    background: darkslategrey; }
+    .div-carousel-enfant .carousel button.control-arrow:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 30%; }
+    .div-carousel-enfant .carousel button.control-arrow.control-prev:before {
+      left: 20%; }
+    .div-carousel-enfant .carousel button.control-arrow.control-next:before {
+      right: 20%; }
+  .div-carousel-enfant .carousel-slider .control-dots li {
+    border-radius: 15px;
+    transform: rotate(45deg);
+    scale: 2;
+    background: black;
+    transition: all 1s linear;
+    border-top: solid white 1px; }
+    .div-carousel-enfant .carousel-slider .control-dots li.selected {
+      border-radius: 15px;
+      transform: rotate(45deg);
+      scale: 2;
+      background: red;
+      transition: border 1s linear;
+      border-top: solid white 1px;
+      animation: rotate-li 2s linear infinite; }
+  .div-carousel-enfant .carousel-slider img.img-enfant {
+    pointer-events: all;
+    border: solid white 2px;
+    filter: drop-shadow(-10px 0 20px black); }
+
+.div-carousel-femme {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url("../img/bg-carousel/bg-woman-carousel.gif") no-repeat center/cover; }
+  .div-carousel-femme .close-carousel {
+    animation: opacity-close-button 3s infinite alternate-reverse linear;
+    transition: all .4s linear;
+    transform: translateY(50px); }
+    .div-carousel-femme .close-carousel:hover {
+      animation: none;
+      opacity: 0.7; }
+  .div-carousel-femme .carousel-root {
+    margin-top: 10vh;
+    position: relative; }
+  .div-carousel-femme .carousel button.control-arrow {
+    opacity: 1;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    top: 50%;
+    margin: 0 25vw;
+    position: absolute;
+    border: solid black 2px;
+    box-shadow: 0 0 10px black;
+    background: darkslategrey; }
+    .div-carousel-femme .carousel button.control-arrow:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 30%; }
+    .div-carousel-femme .carousel button.control-arrow.control-prev:before {
+      left: 20%; }
+    .div-carousel-femme .carousel button.control-arrow.control-next:before {
+      right: 20%; }
+  .div-carousel-femme .carousel-slider .control-dots li {
+    border-radius: 15px;
+    transform: rotate(45deg);
+    scale: 2;
+    background: white;
+    transition: border 1s linear;
+    border-top: solid white 1px; }
+    .div-carousel-femme .carousel-slider .control-dots li.selected {
+      border-radius: 15px;
+      transform: rotate(45deg);
+      scale: 2;
+      background: black;
+      transition: border 1s linear;
+      border-top: solid white 1px;
+      animation: rotate-li 2s linear infinite; }
+  .div-carousel-femme .carousel-slider .div-de-la-photo img.img-femme {
+    transition: all .5s linear;
+    border: solid white 2px;
+    animation: gradient-animation 1s ease infinite alternate-reverse;
+    pointer-events: all; }
+
+.div-carousel-homme {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url("../img/bg-carousel/bg-men-carousel.gif") no-repeat center/cover; }
+  .div-carousel-homme .close-carousel {
+    animation: opacity-close-button 3s infinite alternate-reverse linear;
+    transition: all .4s linear;
+    transform: translateY(50px); }
+    .div-carousel-homme .close-carousel:hover {
+      animation: none;
+      opacity: 0.7; }
+  .div-carousel-homme .carousel-root {
+    margin-top: 10vh;
+    position: relative; }
+  .div-carousel-homme .carousel button.control-arrow {
+    opacity: 1;
+    border-radius: 50%;
+    color: red;
+    height: 40px;
+    width: 40px;
+    top: 50%;
+    margin: 0 25vw;
+    position: absolute;
+    border: solid black 2px;
+    box-shadow: 0 0 10px black;
+    background: darkslategrey; }
+    .div-carousel-homme .carousel button.control-arrow:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 30%; }
+    .div-carousel-homme .carousel button.control-arrow.control-prev:before {
+      left: 20%; }
+    .div-carousel-homme .carousel button.control-arrow.control-next:before {
+      right: 20%; }
+  .div-carousel-homme .carousel-slider .control-dots li {
+    border-radius: 3px;
+    transform: rotate(45deg);
+    scale: 2;
+    background: white;
+    transition: border 1s linear;
+    border-top: solid transparent 1px;
+    animation: rotate-li 2s linear infinite; }
+    .div-carousel-homme .carousel-slider .control-dots li.selected {
+      border-radius: 3px;
+      transform: rotate(45deg);
+      scale: 2;
+      background: black;
+      transition: border 1s linear;
+      border-top: solid white 1px;
+      animation: rotate-li 2s linear infinite; }
+  .div-carousel-homme .carousel-slider .div-de-la-photo img.img-homme {
+    transition: all .5s linear, opacity 2s linear;
+    border: solid white 2px;
+    animation: gradient-animation 1s ease infinite alternate-reverse;
+    pointer-events: all; }
+
+.carousel-actif .video-intro {
+  z-index: -1;
+  position: absolute;
+  top: 100vh; }
+
+.video-hidden {
+  visibility: hidden; }
+
+.video-visible {
+  visibility: visible; }
+
+#enfant-h1 {
+  position: relative;
+  transition: all .2s ease-out; }
+  #enfant-h1:after {
+    content: "Clique pour voir le carousel";
+    position: absolute;
+    top: 30%;
+    font-size: 16px;
+    white-space: nowrap;
+    visibility: hidden;
+    transition: transform .6s ease, visibility .01s linear; }
+  #enfant-h1:hover:after {
+    visibility: visible;
+    transform: translateX(-18vw); }
+
+#femme-h1 {
+  position: relative;
+  transition: all .2s ease-out; }
+  #femme-h1:after {
+    content: "Clique pour voir le carousel";
+    position: absolute;
+    left: 0;
+    top: 30%;
+    font-size: 16px;
+    transform: translateX(-8vw);
+    white-space: nowrap;
+    visibility: hidden;
+    transition: transform .6s ease, visibility .01s linear; }
+  #femme-h1:hover:after {
+    visibility: visible;
+    transform: translateX(-13vw); }
+
+#homme-h1 {
+  position: relative;
+  transition: all .2s ease-out; }
+  #homme-h1:after {
+    content: "Clique pour voir le carousel";
+    position: absolute;
+    left: 0;
+    top: 30%;
+    font-size: 16px;
+    transform: translateX(0vw);
+    white-space: nowrap;
+    visibility: hidden;
+    transition: transform .6s ease, visibility .01s linear; }
+  #homme-h1:hover:after {
+    visibility: visible;
+    transform: translateX(8vw); }
+
+@keyframes span-slide {
+  from {
+    transform: translateX(0); }
+  to {
+    transform: translateX(5vw); } }
+@keyframes gradient-animation {
+  0% {
+    box-shadow: 0 0 20px black; }
+  20% {
+    box-shadow: 0 0 20px grey; }
+  40% {
+    box-shadow: 0 0 20px black; }
+  60% {
+    box-shadow: 0 0 20px grey; }
+  80% {
+    box-shadow: 0 0 20px white; }
+  100% {
+    box-shadow: 0 0 20px grey; } }
+@keyframes rotate-li {
+  from {
+    rotate: 0; }
+  to {
+    rotate: -360deg; } }
+@keyframes rotateY-li {
+  from {
+    rotateY: 0; }
+  to {
+    rotateY: -360deg; } }
+@keyframes opacity-close-button {
+  from {
+    opacity: 0.2; }
+  to {
+    opacity: .04; } }
+
+/*# sourceMappingURL=Menu.css.map */
